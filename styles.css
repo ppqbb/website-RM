@@ -510,15 +510,20 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .footer-links {
     display: flex;
     gap: 4rem;
+    flex-wrap: wrap;
 }
 
 .footer-column {
     text-align: right;
+    min-width: 200px;
+    flex: 1;
 }
 
 .footer-column h3 {
@@ -576,6 +581,32 @@ body {
 
 .social-icons a:hover {
     color: #d85940;
+}
+
+/* Responsive Footer Styles */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-column {
+        text-align: center;
+        width: 100%;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
 }
 
 /* Contact Form Styles */
